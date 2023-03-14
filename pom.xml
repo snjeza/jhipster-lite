@@ -259,6 +259,16 @@
       <version>${testcontainers.version}</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.4.5</version>
+    </dependency>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.26</version>
+    </dependency>
   </dependencies>
 
   <build>
@@ -371,11 +381,26 @@
       </plugin>
 
       <plugin>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok-maven-plugin</artifactId>
+        <version>1.18.20.0</version>
+        <executions>
+          <execution>
+            <?m2e ignore?>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>delombok</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
         <groupId>net.nicoulaj.maven.plugins</groupId>
         <artifactId>checksum-maven-plugin</artifactId>
         <version>${checksum-maven-plugin.version}</version>
         <executions>
           <execution>
+            <?m2e ignore?>
             <id>create-pre-compiled-webapp-checksum</id>
             <phase>generate-resources</phase>
             <goals>
@@ -383,6 +408,7 @@
             </goals>
           </execution>
           <execution>
+            <?m2e ignore?>
             <id>create-compiled-webapp-checksum</id>
             <goals>
               <goal>files</goal>
@@ -426,6 +452,7 @@
         <version>${maven-antrun-plugin.version}</version>
         <executions>
           <execution>
+            <?m2e ignore?>
             <id>eval-frontend-checksum</id>
             <phase>generate-resources</phase>
             <goals>
@@ -453,6 +480,7 @@
         <version>${frontend-maven-plugin.version}</version>
         <executions>
           <execution>
+            <?m2e ignore?>
             <id>install-node-and-npm</id>
             <goals>
               <goal>install-node-and-npm</goal>
@@ -463,12 +491,14 @@
             </configuration>
           </execution>
           <execution>
+            <?m2e ignore?>
             <id>npm install</id>
             <goals>
               <goal>npm</goal>
             </goals>
           </execution>
           <execution>
+            <?m2e ignore?>
             <id>build front</id>
             <goals>
               <goal>npm</goal>
@@ -483,6 +513,7 @@
             </configuration>
           </execution>
           <execution>
+            <?m2e ignore?>
             <id>front test</id>
             <goals>
               <goal>npm</goal>
@@ -538,6 +569,7 @@
         <groupId>io.github.git-commit-id</groupId>
         <artifactId>git-commit-id-maven-plugin</artifactId>
       </plugin>
+
     </plugins>
     <pluginManagement>
       <plugins>
@@ -547,6 +579,7 @@
           <version>${git-commit-id-plugin.version}</version>
           <executions>
             <execution>
+              <?m2e ignore?>
               <goals>
                 <goal>revision</goal>
               </goals>
@@ -570,6 +603,7 @@
           <version>${jacoco.version}</version>
           <executions>
             <execution>
+              <?m2e ignore?>
               <id>pre-unit-tests</id>
               <goals>
                 <goal>prepare-agent</goal>
@@ -577,6 +611,7 @@
             </execution>
             <!-- Ensures that the code coverage report for unit tests is created after unit tests have been run -->
             <execution>
+              <?m2e ignore?>
               <id>post-unit-test</id>
               <phase>test</phase>
               <goals>
@@ -584,6 +619,7 @@
               </goals>
             </execution>
             <execution>
+              <?m2e ignore?>
               <id>pre-integration-tests</id>
               <goals>
                 <goal>prepare-agent-integration</goal>
@@ -591,6 +627,7 @@
             </execution>
             <!-- Ensures that the code coverage report for integration tests is created after integration tests have been run -->
             <execution>
+              <?m2e ignore?>
               <id>post-integration-tests</id>
               <phase>post-integration-test</phase>
               <goals>
@@ -598,6 +635,7 @@
               </goals>
             </execution>
             <execution>
+              <?m2e ignore?>
               <id>merge</id>
               <phase>verify</phase>
               <goals>
@@ -616,6 +654,7 @@
               </configuration>
             </execution>
             <execution>
+              <?m2e ignore?>
               <id>post-merge-report</id>
               <phase>verify</phase>
               <goals>
@@ -635,12 +674,14 @@
           <version>${maven-enforcer-plugin.version}</version>
           <executions>
             <execution>
+              <?m2e ignore?>
               <id>enforce-versions</id>
               <goals>
                 <goal>enforce</goal>
               </goals>
             </execution>
             <execution>
+              <?m2e ignore?>
               <id>enforce-dependencyConvergence</id>
               <configuration>
                 <rules>
