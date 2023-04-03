@@ -1,10 +1,13 @@
 package tech.jhipster.lite.module.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.experimental.SuperBuilder;
+import lombok.NoArgsConstructor;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Builder
 public class D {
     private int a1;
@@ -209,7 +212,7 @@ public class D {
     private int b99;
     private int b100;
 
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         
     }
 }

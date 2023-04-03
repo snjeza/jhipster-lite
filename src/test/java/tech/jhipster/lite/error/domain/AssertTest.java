@@ -1,19 +1,78 @@
 package tech.jhipster.lite.error.domain;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThatCode;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 import java.math.BigDecimal;
 import java.time.Instant;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
+import org.testcontainers.shaded.org.bouncycastle.cert.dane.DANEException;
+
 import tech.jhipster.lite.UnitTest;
 import tech.jhipster.lite.module.domain.D;
+import tech.jhipster.lite.module.domain.Model1;
+import tech.jhipster.lite.module.domain.Model10;
+import tech.jhipster.lite.module.domain.Model11;
+import tech.jhipster.lite.module.domain.Model12;
+import tech.jhipster.lite.module.domain.Model13;
+import tech.jhipster.lite.module.domain.Model15;
+import tech.jhipster.lite.module.domain.Model16;
+import tech.jhipster.lite.module.domain.Model17;
+import tech.jhipster.lite.module.domain.Model18;
+import tech.jhipster.lite.module.domain.Model19;
+import tech.jhipster.lite.module.domain.Model2;
+import tech.jhipster.lite.module.domain.Model20;
+import tech.jhipster.lite.module.domain.Model21;
+import tech.jhipster.lite.module.domain.Model22;
+import tech.jhipster.lite.module.domain.Model23;
+import tech.jhipster.lite.module.domain.Model24;
+import tech.jhipster.lite.module.domain.Model25;
+import tech.jhipster.lite.module.domain.Model26;
+import tech.jhipster.lite.module.domain.Model27;
+import tech.jhipster.lite.module.domain.Model28;
+import tech.jhipster.lite.module.domain.Model29;
+import tech.jhipster.lite.module.domain.Model3;
+import tech.jhipster.lite.module.domain.Model30;
+import tech.jhipster.lite.module.domain.Model31;
+import tech.jhipster.lite.module.domain.Model32;
+import tech.jhipster.lite.module.domain.Model33;
+import tech.jhipster.lite.module.domain.Model34;
+import tech.jhipster.lite.module.domain.Model35;
+import tech.jhipster.lite.module.domain.Model36;
+import tech.jhipster.lite.module.domain.Model37;
+import tech.jhipster.lite.module.domain.Model38;
+import tech.jhipster.lite.module.domain.Model39;
+import tech.jhipster.lite.module.domain.Model4;
+import tech.jhipster.lite.module.domain.Model40;
+import tech.jhipster.lite.module.domain.Model41;
+import tech.jhipster.lite.module.domain.Model42;
+import tech.jhipster.lite.module.domain.Model43;
+import tech.jhipster.lite.module.domain.Model44;
+import tech.jhipster.lite.module.domain.Model45;
+import tech.jhipster.lite.module.domain.Model46;
+import tech.jhipster.lite.module.domain.Model47;
+import tech.jhipster.lite.module.domain.Model48;
+import tech.jhipster.lite.module.domain.Model49;
+import tech.jhipster.lite.module.domain.Model50;
+import tech.jhipster.lite.module.domain.Model51;
+import tech.jhipster.lite.module.domain.Model52;
+import tech.jhipster.lite.module.domain.Model53;
+import tech.jhipster.lite.module.domain.Model54;
+import tech.jhipster.lite.module.domain.Model55;
+import tech.jhipster.lite.module.domain.Model56;
+import tech.jhipster.lite.module.domain.Model5;
+import tech.jhipster.lite.module.domain.Model6;
+import tech.jhipster.lite.module.domain.Model7;
+import tech.jhipster.lite.module.domain.Model8;
+import tech.jhipster.lite.module.domain.Model9;
 
 @UnitTest
 class AssertTest {
@@ -1216,7 +1275,64 @@ class AssertTest {
     }
   }
 
-  private void test() {
+  private void test1() {
+    Model1 model1 = new Model1();
+    model1.getWeight();
+    Model2 model2 = new Model2();
+    model2.getCount();
+    Model3 model3;
+    Model4 model4 = new Model4();
+    Model5 model5;
+    Model6 model6;
+    Model7 model7;
+    Model8 model8;
+    Model9 model9;
+    Model10 model10;
+    Model11 model11;
+    Model12 model12;
+    Model13 model13 = new Model13();
+    model13.getA1();
+    model13.getWeight();
+    Model15 model15;
+    Model16 model16;
+    Model17 model17;
+    Model18 model18;
+    Model19 model19;
+    Model20 model20;
+    Model21 model21;
+    Model22 model22;
+    Model23 model23;
+    Model24 model24;
+    Model25 model25;
+    Model26 model26;
+    Model27 model27;
+    Model28 model28;
+    Model29 model29;
+    Model30 model30;
+    Model31 model31;
+    Model32 model32;
+    Model33 model33;
+    Model34 model34;
+    Model35 model35;
+    Model36 model36;
+    Model37 model37;
+    Model38 model38;
+    Model39 model39;
+    Model40 model40;
+    Model41 model41;
+    Model42 model42;
+    Model43 model43;
+    Model44 model44;
+    Model45 model45;
+    Model46 model46;
+    Model47 model47;
+    Model48 model48;
+    Model49 model49 = new Model49();
+    model49.getA1();
+  }
+
+  public static void test2() {
     D d = new D
+    
   }
 }
